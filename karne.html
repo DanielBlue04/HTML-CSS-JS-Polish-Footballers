@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Polscy Piłkarze</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <a href="index.html" id="aHeader" title="Strona główna">
+        <header>
+            <div id="pp" class="pp">Polscy Piłkarze</div>
+            <div id="XXI" class="XXI">XXI wieku</div>
+        </header>
+    </a>
+
+    <div id="middle">
+        <div id="bramkaDiv">
+            <table id="bramka">
+                <tr><td id="td0" class="bramka_td"></td><td rowspan="2" id="td1" class="bramka_td"></td><td id="td2" class="bramka_td"></td></tr>
+                <tr><td id="td3" class="bramka_td"></td><td id="td4" class="bramka_td"></td></tr>
+            </table>
+        </div>
+
+        <div id="resultsDiv">
+            <table id="results">
+                <tr><td id="you">YOU</td><td id="shoot1"></td><td id="shoot3"></td><td id="shoot5"></td><td id="shoot7"></td><td id="shoot9"></td><td id="youResult">0</td></tr>
+                <tr><td id="cpu">CPU</td><td id="shoot2"></td><td id="shoot4"></td><td id="shoot6"></td><td id="shoot8"></td><td id="shoot10"></td><td id="cpuResult">0</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        Created by:<br>
+        Daniel Pacocha<br>
+        danielpacocha@o2.pl<br>
+        664 704 748
+    </footer>
+
+    <div id="gameOverScreen">
+        <div id="gameOverBox">
+            <div id="textMessage">
+                
+            </div>
+
+            <div id="scoreMessage">
+                
+            </div>
+
+            <div id="decisionDiv">
+                <div id="decisionMenu">
+                    <div id="mainSiteDiv">
+                        <a href="index.html" class="decision">Strona główna</a>
+                    </div>
+
+                    <div id="tryAgainDiv">
+                        <a href="javascript:window.location.reload(true)" class="decision">Zagraj ponownie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="whistle" src="audio/whistle.mp3" preload="auto"></audio>
+    <audio id="cheer" src="audio/cheer.mp3" preload="auto"></audio>
+    <audio id="sad" src="audio/sad.mp3" preload="auto"></audio>
+    <audio id="final_whistle" src="audio/final_whistle.mp3" preload="auto"></audio>
+    <audio id="win_song" src="audio/win_song.mp3" preload="auto"></audio>
+    <audio id="draw_song" src="audio/draw_song.mp3" preload="auto"></audio>
+    <audio id="lose_song" src="audio/lose_song.mp3" preload="auto"></audio>
+
+    <script>
+        setInterval(animate, 10000);
+
+        function animate() {
+            if(document.getElementById("pp").className == "pp") {
+                document.getElementById("pp").setAttribute("class", "pp2");
+                document.getElementById("XXI").setAttribute("class", "XXI2");
+            }
+            else {
+                document.getElementById("pp").setAttribute("class", "pp");
+                document.getElementById("XXI").setAttribute("class", "XXI");
+            }
+        }
+        
+        let turn = 0;
+
+        let fragment = document.getElementsByClassName("bramka_td");
+        let divClicked = false;
+
+        let youScore = 0;
+        let cpuScore = 0;
+
+        for(i=0; i<fragment.length; i++) {
+            fragment[i].addEventListener('mouseover', mouseOver);
+            fragment[i].addEventListener('mouseout', mouseOut);
+            fragment[i].addEventListener('click', action);
+        }
+
+        function mouseOver() {
+            if(turn%2==0) {
+                this.innerHTML = "<img src='img/ball.png' alt='' class='shootSave'>";
+            }
+            else {
+                this.innerHTML = "<img src='img/gloves.png' alt='' class='shootSave'>";
+            }
+        }
+
+        function mouseOut() {
+            if(!divClicked) {
+                this.innerHTML = "";
+            }   
+        }
+
+        
+            function action() {
+                divClicked = true;
+                this.style.backgroundColor = "green";
+
+                document.getElementById("whistle").play();
+
+                let youActionStr = this.id;
+                let youAction = Number(youActionStr.slice(2));
+
+                for(i=0; i<fragment.length; i++) {
+                    fragment[i].style.pointerEvents = "none";
+                }
+
+                setTimeout(function() {
+                    let cpuAction = Math.floor(Math.random() * (4 - 0 + 1) + 0);
+
+                    if(turn%2==0) {
+                        fragment[cpuAction].innerHTML = "<img src='img/gloves.png' alt='' class='shootSave'>";
+                    }
+                    else {
+                        fragment[cpuAction].innerHTML = "<img src='img/ball.png' alt='' class='shootSave'>";
+                    }
+
+                    fragment[cpuAction].style.backgroundColor = "yellow";
+
+                    turn++;
+                    
+                    if(youAction == cpuAction) {
+                        if(turn%2!=0) {
+                            document.getElementById("sad").play();
+                        }
+                        else {
+                            document.getElementById("cheer").play();
+                        }
+
+                        document.getElementById("shoot" + turn).innerHTML = "<img src='img/red_circle.png' class='circle' alt=''>";
+                    }
+                    else {
+                        if(turn%2!=0) {
+                            youScore++;
+                            document.getElementById("cheer").play();
+                        }
+                        else {
+                            cpuScore++;
+                            document.getElementById("sad").play();
+                        }
+
+                        document.getElementById("shoot" + turn).innerHTML = "<img src='img/green_circle.png' class='circle' alt=''>";
+                    }
+
+                    document.getElementById("youResult").innerHTML = youScore;
+                    document.getElementById("cpuResult").innerHTML = cpuScore;
+
+                    setTimeout(function() {
+                        for(i=0; i<fragment.length; i++) {
+                            fragment[i].style.pointerEvents = "";
+                            fragment[i].innerHTML = "";
+                            fragment[i].style.backgroundColor = "";
+                            divClicked = false;
+                        }
+                    }, 3000);
+
+                    setTimeout(function() {
+                        if(turn>=10) {
+                            if(youScore > cpuScore) {
+                                document.getElementById("textMessage").innerHTML = "Wygrałeś";
+                                document.getElementById("textMessage").style.color = "green";
+                                document.getElementById("scoreMessage").style.color = "green";
+                            }
+                            else if(youScore < cpuScore) {
+                                document.getElementById("textMessage").innerHTML = "Przegrałeś";
+                                document.getElementById("textMessage").style.color = "red";
+                                document.getElementById("scoreMessage").style.color = "red";
+                            }
+                            else {
+                                document.getElementById("textMessage").innerHTML = "Remis";
+                                document.getElementById("textMessage").style.color = "yellow";
+                                document.getElementById("scoreMessage").style.color = "yellow";
+                            }
+
+                            document.getElementById("scoreMessage").innerHTML = youScore + " : " + cpuScore;
+                            document.getElementById("gameOverScreen").setAttribute("id", "gameOverScreenOpened");
+
+                            document.getElementById("final_whistle").play();
+
+                            setTimeout(function() {
+                                if(youScore > cpuScore) {
+                                    document.getElementById("win_song").play();
+                                }
+                                else if(youScore < cpuScore) {
+                                    document.getElementById("lose_song").play();
+                                }
+                                else {
+                                    document.getElementById("draw_song").play();
+                                }
+                            }, 1500);
+                        }
+                    }, 500);
+                }, 2000);
+            }      
+    </script>
+</body>
+</html>

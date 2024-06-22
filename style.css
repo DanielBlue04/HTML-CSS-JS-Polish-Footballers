@@ -1,0 +1,272 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/pitch.jpg");
+    background-size: cover;
+}
+
+#aHeader {
+    text-decoration: none;
+}
+
+#pp {
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: 3s;
+}
+
+.pp {
+    background-color: white;
+    color: red;
+}
+
+.pp2 {
+    background-color: red;
+    color: white;
+}
+
+#XXI {
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: 3s;
+}
+
+.XXI {
+    background-color: red;
+    color: white;
+}
+
+.XXI2 {
+    background-color: white;
+    color: red;
+}
+
+#left {
+    width: 36%;
+    float: left;
+    background-image: url("img/playersBackground.jpg");
+    background-size: cover;
+}
+
+.player a {
+    text-decoration: none;
+    color: black;
+}
+
+.list {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.05vw 0 black;
+}
+
+.list:hover {
+    background-image: url("img/grass.png");
+    background-size: contain;
+}
+
+#list5 {
+    box-shadow: none;
+}
+
+.point {
+    width: 13.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.point img {
+    max-width: 60%;
+}
+
+.player {
+    font-size: 2vw;
+    width: 73%;
+    display: flex;
+    justify-content: center;
+}
+
+.player a {
+    background-image: linear-gradient(red, red);
+    background-size: 0 100%;
+    border-radius: 1vw;
+    background-repeat: no-repeat;
+    transition: 0.7s;
+}
+
+.player a:hover {
+    background-size: 100% 100%;
+    color: #f7f7f7;
+    font-size: 2.15vw;
+}
+
+#center {
+    width: 61%;
+    float: left;
+    background-image: url("img/opisBackground.jpg");
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#opis {
+    float: left;
+    width: 100%;
+    height: 60%;
+    font-size: 2.5vw;
+    color: #f7f7f7;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: imgAnimation 1s forwards;
+}
+
+@keyframes imgAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#strip {
+    float: left;
+    height: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#strip2 {
+    width: 80%;
+    background-color: white;
+}
+
+#divButton {
+    float: left;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button {
+    width: 10vw;
+    height: 10vh;
+    background-image: url("img/fireball.jpg");
+    background-size: cover;
+    border-radius: 10vw;
+    border: 0.25vw solid white;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: 0.5s;
+}
+
+#button:hover {
+    width: 11vw;
+    height: 11vh;
+}
+
+#zagraj {
+    float: left;
+    width: 100%;
+    height: 1%;
+    font-size: 2vw;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right {
+    width: 3%;
+    background-image: url("img/linksBackground.jpg");
+    background-size: cover;
+    float: left;
+}
+
+#r1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+#r2 {
+    width: 0%;
+    height: 100%;
+    float: left;
+}
+
+.links {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.links a {
+    text-decoration: none;
+    margin: auto;
+    color: #f7f7f7;
+    font-size: 1.75vw;
+    transition: 0.5s;
+}
+
+.links a:hover {
+    font-size: 2.25vw;
+}
+
+#arrow {
+    width: 2vw;
+    cursor: pointer;
+}
+
+.arrow2 {
+    transform: rotate(180deg);
+}
+
+#arrow:hover {
+    opacity: 0.4;
+}
+
+.middle {
+    height: 70vh;
+}
+
+footer {
+    clear: both;
+    height: 12vh;
+    background-image: url("img/pitch.jpg");
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2vh;
+}

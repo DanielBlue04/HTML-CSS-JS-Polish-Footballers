@@ -1,0 +1,557 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/pitch.jpg");
+    background-size: cover;
+}
+
+#aHeader {
+    text-decoration: none;
+}
+
+#pp {
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: 3s;
+}
+
+.pp {
+    background-color: white;
+    color: red;
+}
+
+.pp2 {
+    background-color: red;
+    color: white;
+}
+
+#XXI {
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: 3s;
+}
+
+.XXI {
+    background-color: red;
+    color: white;
+}
+
+.XXI2 {
+    background-color: white;
+    color: red;
+}
+
+#middle {
+    float: left;
+    width: 100%;
+    display: flex;
+}
+
+#left {
+    float: left;
+    width: 24%;
+    height: auto;
+    background-image: url("img/playersBackground.jpg");
+    background-size: cover;
+}
+
+#playerDiv {
+    border: 0.75vw solid black;
+    margin: 1.2vw;
+    float: left;
+    width: 20vw;
+    height: 50vh;
+    position: fixed;
+}
+
+#playerPhoto {
+    float: left;
+    width: 100%;
+    height: 79%;
+}
+
+#playerPhoto img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#playerDivStrip {
+    float: left;
+    height: 1.5%;
+    width: 100%;
+    background-color: black;
+}
+
+#playerInfo {
+    float: left;
+    height: 19.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4vw;
+    color: #f7f7f7;
+    background-image: url("img/opisBackground.jpg");
+    background-size: cover;
+}
+
+#playerName {
+    float: left;
+    width: 49.5%;
+}
+
+#playerStrip {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1%;
+    height: 100%;
+}
+
+#playerStrip2 {
+    width: 100%;
+    height: 60%;
+    background-color: white;
+}
+
+#playerPosition {
+    float: left;
+    width: 49.5%;
+}
+
+#content {
+    float: left;
+    width: 74%;
+    height: 150%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    background-image: url("img/opisBackground.jpg");
+    background-size: cover;
+    color: #f7f7f7;
+}
+
+#menuBox {
+    width: 80%;
+    height: 5vh;
+    margin: auto;
+    border-radius: 0 0 2vw 2vw;
+    position: sticky;
+    top: 0;
+}
+
+#menu {
+    width: 100%;
+    height: 25%;
+    border-radius: 0 0 2vw 2vw;
+    background-image: url("img/linksBackground.jpg");
+    transition: 0.5s;
+}
+
+#menuBox:hover #menu {
+    height: 100%;
+}
+
+.goToDiv {
+    float: left;
+    width: 16.66%;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1vw;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+#menuBox:hover .goToDiv {
+    opacity: 1;
+}
+
+.goTo {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.goTo:hover {
+    font-size: 1.25vw;
+}
+
+.stripOpis {
+    float: left;
+    width: 100%;
+    height: 10vh;
+}
+
+.pointOpisL {
+    float: left;
+    width: 27.5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.stripText {
+    float: left;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.pointOpisR {
+    float: left;
+    width: 27.5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.imgPointers {
+    max-width: 25%;
+    max-height: 90%;
+}
+
+.opis {
+    float: left;
+    width: 100%;
+    font-family: "Verdana";
+    font-size: 1vw;
+    padding-top: 2vh;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+#kariera {
+    border-collapse: collapse;
+    background-color: navy;
+    font-weight: bold;
+}
+
+#kariera td {
+    border: 0.2vw solid black;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+}
+
+td img {
+    max-width: 100%;
+    max-height: 75%;
+}
+
+#tablesStats {
+    float: left;
+    width: 100%;
+    font-family: "Verdana";
+    font-size: 1vw;
+    padding-top: 2vh;
+    margin-bottom: 10vh;
+}
+
+.statystyki {
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 5vh;
+    background-image: url("img/playersBackground.jpg");
+    font-weight: bold;
+}
+
+.statystyki td, th {
+    border: 0.2vw solid black;
+    width: 10vw;
+    text-align: center;
+}
+
+.statystyki th {
+    height: 3vw;
+}
+
+.rest_tr {
+    color: black;
+}
+
+.rest_tr:hover {
+    background-color: red;
+    color: #f7f7f7;
+}
+
+#tr1_1 {
+    background-color: bisque;
+    color: black;
+}
+
+.tr2 {
+    background-color: green;
+}
+
+#tr2_1 {
+    background-image: linear-gradient(white 50%, red 50%);
+    color: black;
+}
+
+.statystyki td {
+    height: 2vw;
+}
+
+.suma {
+    background-color: navy;
+}
+
+#galeria {
+    float: left;
+    width: 100%;
+    padding-top: 2vh;
+    margin-bottom: 10vh;
+}
+
+.photosDiv {
+    float: left;
+    width: 22.2%;
+    height: 10vw;
+    margin: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photos {
+    width: 90%;
+    height: 90%;
+    border-radius: 1vw;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.photos:hover {
+    width: 100%;
+    height: 100%;
+}
+
+#comments {
+    float: left;
+    width: 100%;
+    height: 40vh;
+    font-family: "Verdana";
+    font-size: 1vw;
+    padding-top: 2vh;
+    margin-bottom: 10vh;
+}
+
+#addedComments {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.comment {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 2vh;
+}
+
+.stripComment {
+    width: 99%;
+    height: 25%;
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.textComment {
+    width: 99%;
+    height: 75%;
+    background-color: gainsboro;
+    color: black;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-top: 0.25vw;
+}
+
+#addComment {
+    width: 80%;
+    height: 20%;
+    border: 0.1vw solid black;
+    background-color: wheat;
+    font-size: 0.8vw;
+    color: black;
+    margin: auto;
+}
+
+#addCommentL {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25vw;
+}
+
+#nickname {
+    width: 35%;
+}
+
+#age {
+    width: 15%;
+}
+
+#plec {
+    width: 25%;
+}
+
+#addCommentC {
+    float: left;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tresc {
+    width: 100%;
+    height: 80%;
+    font-size: 0.75vw;
+    resize: none;
+}
+
+#addCommentR {
+    float: left;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit {
+    width: 75%;
+}
+
+footer {
+    clear: both;
+    height: 12vh;
+    background-image: url("img/pitch.jpg");
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2vh;
+}
+
+#galleryScreen {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+
+#galleryScreenOpened {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    transition: 0.5s opacity;
+}
+
+#galleryBox {
+    width: 60%;
+    height: 80%;
+}
+
+#galleryPhotos {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.bigPhoto {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1vw;
+}
+
+#galleryMenuBox {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#galleryMenu {
+    width: 25%;
+    height: 50%;
+    border-radius: 0.5vw;
+    background-image: url("img/linksBackground.jpg");
+}
+
+.galleryMenuDiv {
+    float: left;
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    max-width: 60%;
+    max-height: 60%;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.navigation:hover {
+    max-width: 70%;
+    max-height: 70%;
+}

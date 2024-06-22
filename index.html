@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Polscy Piłkarze</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <a href="index.html" id="aHeader" title="Strona główna">
+        <header>
+            <div id="pp" class="pp">Polscy Piłkarze</div>
+            <div id="XXI" class="XXI">XXI wieku</div>
+        </header>
+    </a>
+
+    <div id="left" class="middle">
+        <div class="list">
+            <div id="li_1" class="point pointL">
+                
+            </div>
+
+            <div id="player_1" class="player">
+                <a href="robert.html" id="robert">Robert Lewandowski</a>
+            </div>
+
+            <div id="li_1b" class="point pointR">
+                
+            </div>
+        </div>
+        
+        <div class="list">
+            <div id="li_2" class="point pointL">
+                
+            </div>
+
+            <div id="player_2" class="player">
+                <a href="jakub.html" id="jakub">Jakub Błaszczykowski</a>
+            </div>
+
+            <div id="li_2b" class="point pointR">
+                
+            </div>
+        </div>
+        
+        <div class="list">
+            <div id="li_3" class="point pointL">
+                
+            </div>
+
+            <div id="player_3" class="player">
+                <a href="lukasz.html" id="lukasz">Łukasz Piszczek</a>
+            </div>
+
+            <div id="li_3b" class="point pointR">
+                
+            </div>
+        </div>
+
+        <div class="list">
+            <div id="li_4" class="point pointL">
+                
+            </div>
+
+            <div id="player_4" class="player">
+                <a href="kamil.html" id="kamil">Kamil Glik</a>
+            </div>
+
+            <div id="li_4b" class="point pointR">
+                
+            </div>
+        </div>
+            
+        <div id="list5" class="list">
+            <div id="li_5" class="point pointL">
+                
+            </div>
+
+            <div id="player_5" class="player">
+                <a href="wojciech.html" id="wojciech">Wojciech Szczęsny</a>
+            </div>
+
+            <div id="li_5b" class="point pointR">
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="center" class="middle">
+        <div id="opis">
+            Strona poświęcona reprezentantom Polski w piłce nożnej. Znajdziesz tu informacje o najlepszych zawodnikach na swoich pozycjach.
+        </div>
+
+        <div id="strip">
+            <div id="strip2">
+
+            </div>
+        </div>
+
+        <div id="divButton">
+            <button onclick="window.location.href='karne.html'" id="button" title="Zagraj w Rzuty Karne!"></button>
+        </div>
+
+        <div id="zagraj">
+            Kliknij przycisk, aby zagrać w Rzuty Karne!
+        </div>
+    </div>
+
+    <div id="right" class="middle">
+        <div id="r1">
+            <img src="img/arrow.png" alt="arrow" id="arrow">
+        </div>
+
+        <div id="r2">
+            <div id="r2_1" class="links">
+                <a href="https://pl.wikipedia.org/" target="_blank">Wikipedia</a>
+            </div>
+
+            <div id="r2_2" class="links">
+                <a href="https://www.transfermarkt.pl/" target="_blank">Transfermarkt</a>
+            </div>
+
+            <div id="r2_3" class="links">
+                <a href="https://pzpn.pl/" target="_blank">PZPN</a>
+            </div>
+
+            <div id="r2_4" class="links">
+                <a href="https://www.goal.pl/" target="_blank">Goal</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Created by:<br>
+        Daniel Pacocha<br>
+        danielpacocha@o2.pl<br>
+        664 704 748
+    </footer>
+
+    <script>
+        let robert = document.getElementById("robert");
+        let jakub = document.getElementById("jakub");
+        let lukasz = document.getElementById("lukasz");
+        let kamil = document.getElementById("kamil");
+        let wojciech = document.getElementById("wojciech");
+
+        let onclickText = "onclick=window.location.href='karne.html'";
+
+        let centerDiv = "<div id='opis'>Strona poświęcona reprezentantom Polski w piłce nożnej. Znajdziesz tu informacje o najlepszych zawodnikach na swoich pozycjach.</div><div id='strip'><div id='strip2'></div></div><div id='divButton'><button " + onclickText + " id='button' title='Zagraj w Rzuty Karne!''></button></div><div id='zagraj'>Kliknij przycisk, aby zagrać w Rzuty Karne!</div>";
+
+        robert.addEventListener("mouseover", mouseOverR);
+        robert.addEventListener("mouseout", mouseOutR);
+        jakub.addEventListener("mouseover", mouseOverJ);
+        jakub.addEventListener("mouseout", mouseOutJ);
+        lukasz.addEventListener("mouseover", mouseOverL);
+        lukasz.addEventListener("mouseout", mouseOutL);
+        kamil.addEventListener("mouseover", mouseOverK);
+        kamil.addEventListener("mouseout", mouseOutK);
+        wojciech.addEventListener("mouseover", mouseOverW);
+        wojciech.addEventListener("mouseout", mouseOutW);
+
+        function mouseOverR() {
+            document.getElementById("li_1").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("li_1b").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("center").innerHTML = "<img src='img/robert.jpg' alt=''>";
+        }
+
+        function mouseOutR() {
+            document.getElementById("li_1").innerHTML = "";
+            document.getElementById("li_1b").innerHTML = "";
+            document.getElementById("center").innerHTML = centerDiv;
+        }
+
+        function mouseOverJ() {
+            document.getElementById("li_2").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("li_2b").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("center").innerHTML = "<img src='img/jakub.jpg' alt=''>";
+        }
+
+        function mouseOutJ() {
+            document.getElementById("li_2").innerHTML = "";
+            document.getElementById("li_2b").innerHTML = "";
+            document.getElementById("center").innerHTML = centerDiv;
+        }
+
+        function mouseOverL() {
+            document.getElementById("li_3").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("li_3b").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("center").innerHTML = "<img src='img/lukasz.jpg' alt=''>";
+        }
+
+        function mouseOutL() {
+            document.getElementById("li_3").innerHTML = "";
+            document.getElementById("li_3b").innerHTML = "";
+            document.getElementById("center").innerHTML = centerDiv;
+        }
+
+        function mouseOverK() {
+            document.getElementById("li_4").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("li_4b").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("center").innerHTML = "<img src='img/kamil.jpg' alt=''>";
+        }
+
+        function mouseOutK() {
+            document.getElementById("li_4").innerHTML = "";
+            document.getElementById("li_4b").innerHTML = "";
+            document.getElementById("center").innerHTML = centerDiv;
+        }
+
+        function mouseOverW() {
+            document.getElementById("li_5").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("li_5b").innerHTML = "<img src='img/ball.png' alt=''>";
+            document.getElementById("center").innerHTML = "<img src='img/wojciech.jpg' alt=''>";
+        }
+
+        function mouseOutW() {
+            document.getElementById("li_5").innerHTML = "";
+            document.getElementById("li_5b").innerHTML = "";
+            document.getElementById("center").innerHTML = centerDiv;
+        }
+
+        let arrow = document.getElementById("arrow");
+        let change = 0;
+
+        arrow.addEventListener("click", clickA);
+
+        let id = null;
+        let vwL = 36;
+        let vwC = 61;
+        let vwR = 3;
+        let vwR1 = 100;
+        let vwR2 = 0;
+
+        function clickA() {
+            if(change%2 == 0) {
+                arrow.setAttribute("class", "arrow2");
+                
+            }
+            else {
+                arrow.classList.remove("arrow2");
+            }
+            
+            clearInterval(id);    
+            id = setInterval(frame, 10);
+
+            function frame() {
+                if(change%2 == 1) {
+                    if(vwR == 20) {
+                        clearInterval(id);
+                    }
+                    else {
+                        vwL-=0.5;
+                        vwC-=0.5;
+                        vwR++;
+                        vwR1-=5;
+                        vwR2+=5;
+                        document.getElementById("left").style.width = vwL + '%';
+                        document.getElementById("center").style.width = vwC + '%';
+                        document.getElementById("right").style.width = vwR + '%';
+                        document.getElementById("r1").style.width = vwR1 + '%';
+                        document.getElementById("r2").style.width = vwR2 + '%';
+                    }
+                }
+                
+                else {
+                    if(vwR == 3) {
+                        clearInterval(id);
+                    }
+                    else {
+                        vwL+=0.5;
+                        vwC+=0.5;
+                        vwR--;
+                        vwR1+=5;
+                        vwR2-=5;
+                        document.getElementById("left").style.width = vwL + '%';
+                        document.getElementById("center").style.width = vwC + '%';
+                        document.getElementById("right").style.width = vwR + '%';
+                        document.getElementById("r1").style.width = vwR1 + '%';
+                        document.getElementById("r2").style.width = vwR2 + '%';
+                    }
+                }
+            }
+
+            change++;
+        }
+
+        setInterval(animate, 10000);
+
+        function animate() {
+            if(document.getElementById("pp").className == "pp") {
+                document.getElementById("pp").setAttribute("class", "pp2");
+                document.getElementById("XXI").setAttribute("class", "XXI2");
+            }
+            else {
+                document.getElementById("pp").setAttribute("class", "pp");
+                document.getElementById("XXI").setAttribute("class", "XXI");
+            }
+        }
+        
+    </script>
+</body>
+</html>

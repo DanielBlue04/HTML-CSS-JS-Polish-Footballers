@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/pitch.jpg");
+    background-size: cover;
+}
+
+#aHeader {
+    text-decoration: none;
+}
+
+#pp {
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: 3s;
+}
+
+.pp {
+    background-color: white;
+    color: red;
+}
+
+.pp2 {
+    background-color: red;
+    color: white;
+}
+
+#XXI {
+    font-size: 3.5vw;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: 3s;
+}
+
+.XXI {
+    background-color: red;
+    color: white;
+}
+
+.XXI2 {
+    background-color: white;
+    color: red;
+}
+
+#middle {
+    height: 90vh;
+    background-image: url("img/opisBackground.jpg");
+    background-size: cover;
+}
+
+#bramkaDiv {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bramka {
+    width: 60%;
+    height: 90%;
+    border: 1.5vw solid white;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 1vw 1vw 0 0;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+#bramka td {
+    border: 0.2vw solid black;
+    height: 50%;
+    cursor: pointer;
+}
+
+.shootSave {
+    max-width: 25%;
+    max-height: 80%;
+    pointer-events: none;
+}
+
+#resultsDiv {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#results {
+    width: 25%;
+    height: 60%;
+    border: 0.2vw solid black;
+    border-spacing: 0;
+    text-align: center;
+    background-image: url("img/playersBackground.jpg");
+    background-size: cover;
+}
+
+#results td {
+    border: 0.2vw solid black;
+    width: 14%;
+    height: 50%;
+}
+
+.circle {
+    max-width: 50%;
+    max-height: 80%;
+}
+
+#you {
+    background-color: green;
+    font-family: "Verdana";
+    font-weight: bold;
+}
+
+#cpu {
+    background-color: yellow;
+    font-family: "Verdana";
+    font-weight: bold;
+}
+
+#youResult {
+    background-color: navy;
+    font-size: 1.75vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f7f7f7;
+}
+
+#cpuResult {
+    background-color: navy;
+    font-size: 1.75vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f7f7f7;
+}
+
+footer {
+    clear: both;
+    height: 12vh;
+    background-image: url("img/pitch.jpg");
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2vh;
+}
+
+#gameOverScreen {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+
+#gameOverScreenOpened {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    transition: 0.5s opacity;
+}
+
+#gameOverBox {
+    width: 80%;
+    height: 80%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f7f7f7;
+}
+
+#textMessage {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+}
+
+#scoreMessage {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+}
+
+#decisionDiv {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#decisionMenu {
+    width: 60%;
+    height: 100%;
+    font-size: 2vw;
+}
+
+#mainSiteDiv {
+    float: left;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tryAgainDiv {
+    float: left;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decision {
+    text-decoration: none;
+    color: #f7f7f7;
+    transition: 0.5s;
+}
+
+.decision:hover {
+    font-size: 2.25vw;
+}
